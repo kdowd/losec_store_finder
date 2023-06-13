@@ -1,0 +1,15 @@
+p.no-location-result {
+  color: #2c398d;
+  font-weight: 500;
+  z-index: 5;
+  transition-duration: 1s;
+}
+
+p.show-result {
+  transform: translateY(0);
+  display: block;
+}
+p.hide-result {
+  transform: translateY(-2000%);
+  display: none;
+}

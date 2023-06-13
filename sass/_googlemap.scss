@@ -1,0 +1,56 @@
+
+
+.map-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  margin: 0 auto;
+  padding-bottom: 0.5rem;
+ 
+  // width: calc(100% - 24px);
+ 
+
+  > div {
+    flex-basis: 48%;
+  }
+
+  > div:last-of-type {
+    min-height: 800px;
+   
+    @media screen and (min-width: $tablet) {
+      flex: 1;
+      min-height: unset;
+     
+      
+      
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    flex-direction: row;
+    padding-right: 0.5rem;
+  }
+
+}
+
+
+
+.gm-style-iw-d {
+  > div:first-of-type {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    > *:nth-child(1n) {
+      color: darkgray;
+      line-height: 1.25rem;
+    }
+  }
+}
+
+
+.closest-stores{
+  padding-left: 0.5rem;
+}

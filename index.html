@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="./images/tri.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/icon32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="./css/styles.css" rel="stylesheet" />
+    <script src="js-production/bundle.min.js"></script>
+  </head>
+  <body>
+    <div class="body-wrapper">
+      <!-- <div>
+          <img class="hero" src="./images/wheretobuy.jpg" alt="">
+      </div> -->
+ 
+      <section class="form-parent">
+        <div class="form-wrap">
+          
+          <h3>
+            Enter your location to search for your nearest Losec stockist:
+          </h3>
+          <form action="#" method="get" onsubmit="onLocationSearch(event)">
+            <div class="my-inputs">
+              <input type="text" placeholder="Enter your location" />
+              <button type="submit" value="Submit">
+                <svg
+                  stroke="currentColor"
+                  fill="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 512 512"
+                  height="1em"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M256 64C150.13 64 64 150.13 64 256s86.13 192 192 192 192-86.13 192-192S361.87 64 256 64zm91.31 283.31a16 16 0 01-22.62 0l-42.84-42.83a88.08 88.08 0 1122.63-22.63l42.83 42.84a16 16 0 010 22.62z"
+                  ></path>
+                  <circle cx="232" cy="232" r="56"></circle>
+                </svg>
+              </button>
+            </div>
+            <p class="no-location-result hide-result">Location not found...</p>
+          </form>
+        </div>
+      </section>  
+      <!-- fast fix, inline for now.... -->
+      <div class="svg-loader" style="display: flex; justify-content: center; margin-top: 2rem;"><img src="./svg-loaders/oval.svg" alt=""></div> 
+      <div class="location-blocked" style="font-family: Roboto, sans-serif;display: none; flex-direction:column; margin-top: 0.5rem; text-align: center; justify-content:center;">
+        <!-- <p>Please enter your location in the search field.</p> -->
+      </div>
+     
+      <div class="map-wrap">
+
+        <div class="closest-stores"></div>
+        <div class="map-container"></div>
+      </div>
+
+      <!-- for cloning only -->
+      <div
+        class="row cloned"
+        style="
+          display: none;
+          position: absolute;
+          top: 0px;
+          left: 0;
+          pointer-events: none;
+        "
+      >
+        <span></span>
+        <div class="storeName"></div>
+        <div class="storeAddress"></div>
+        <div class="distance"></div>
+      </div>
+      <!-- end for cloning -->
+    </div>
+    <!-- end body wrapper -->
+  </body>
+</html>
+
+<!-- DISTANCE -->
+<!-- </html>https://stackoverflow.com/questions/18822948/use-google-maps-computedistancebetween-to-get-the-closest-location-returns-nan -->
+<!-- exponential backoff -->
+<!-- https://stackoverflow.com/questions/57511554/async-and-await/57513095 -->

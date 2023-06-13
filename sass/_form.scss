@@ -1,0 +1,89 @@
+.form-parent {
+ 
+  color: snow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // padding-left: 1rem;
+  // padding-bottom: 2rem;
+  padding: 2rem;
+
+  .form-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    h3 {
+      font-weight: 100;
+      color: black;
+      padding-right: 1rem;
+    }
+
+    @media screen and (min-width: $tablet) {
+      flex-direction: row;
+     
+      align-items: baseline;
+
+    }
+  }
+
+
+
+  form {
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 95%;
+
+    @media screen and (min-width: $tablet) {
+     width: 45%;
+     align-items: center;
+    }
+    
+  }
+}
+
+.form-parent form input[type="text"] {
+  padding: 0 0 0 20px;
+  height: 66px;
+  border: 0;
+  width: 328px;
+  border-radius: 3px 0 0 3px;
+  text-align: left;
+  font-weight: 400;
+  color: #6a7477;
+  font-size: 18px;
+  font-size: 1.125rem;
+}
+
+.form-parent form > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+.form-parent form button {
+  position: relative;
+  width: 87px;
+  height: 66px;
+  border: 0;
+  cursor: pointer;
+  border-radius: 0 3px 3px 0;
+  color: black;
+  background-color: #2c398d;
+  vertical-align: top;
+}
+
+.form-parent form button svg {
+  width: 90%;
+  height: auto;
+  filter: invert(1);
+}

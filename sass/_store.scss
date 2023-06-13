@@ -1,0 +1,59 @@
+.row.cloned {
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+  background-color: #6a747714;
+  cursor: pointer;
+}
+
+.row.cloned:hover {
+  background-color: #940e7b;
+  color: snow;
+  span:first-of-type {
+    background-color: #940e7b;
+  }
+}
+
+.row.cloned span:first-of-type {
+  display: inline-flex;
+  background-color: #940e7b;
+  color: snow;
+  padding: 2rem;
+
+  flex-direction: column;
+  justify-content: center;
+  font-weight: 500;
+  align-self: stretch;
+  pointer-events: none;
+}
+
+.row.cloned > div {
+  padding: 1rem;
+}
+
+.row.cloned .storeName {
+  flex-basis: 20%;
+  pointer-events: none;
+}
+
+.row.cloned .storeAddress {
+  flex-basis: 40%;
+  pointer-events: none;
+}
+
+.row.cloned > div:last-of-type {
+  margin-left: auto;
+  pointer-events: none;
+}
+
+@keyframes fadeInDown {
+  0% {
+    transform: translateY(-32px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
