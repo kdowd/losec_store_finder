@@ -1,6 +1,6 @@
 class LocationSearch {
   constructor(address) {
-    console.log("new location search");
+    console.log("new location search ", address);
     this.address = encodeURIComponent(address);
   }
 
